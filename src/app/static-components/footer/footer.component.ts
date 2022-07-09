@@ -1,3 +1,4 @@
+import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.less']
 })
 export class FooterComponent implements OnInit {
+  currentTime: Date = new Date();
+  year: number = 0;
+  constructor() { 
 
-  constructor() { }
+  }
+  
 
   ngOnInit(): void {
+    this.year = this.currentTime.getFullYear();
   }
 
 }
