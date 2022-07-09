@@ -52,15 +52,15 @@
         </div>
         <!-- Navigation -->
           <div class="row">
-            <div class="event col-12">
+            <div *ngFor="let show of shows" class="event col-12">
                   <div class="container events" style="border-top: solid 4px azure;">
                     <div class="row align-items-center py-6">
                       <div class="col-3 col-md-2 col-lg-1">
 
                         <!-- Date -->
                         <time class="d-block text-center text-black" datetime="2022-02-11">
-                          <span class="d-block mb-2 display-6 font-serif text-white">12</span>
-                          <span class="text-white">Aug</span>
+                          <span class="d-block mb-2 display-6 font-serif text-white">{{this.show.EventDay}}</span>
+                          <span class="text-white">{{this.show.EventMonth}}</span>
                         </time>
 
                       </div>
@@ -70,12 +70,12 @@
                         <div class="h4 mb-4 mb-md-0" data-bs-toggle="collapse" data-bs-target="#Allovous"
                           aria-controls="eventTwo" role="button">
                           <h2 class="mb-3 text-white" style="font-weight: bolder;">
-                            Legion 351
+                            {{this.show.Title}}
                           </h2>
 
                           <!-- Description -->
                           <p class="mb-6 text-size-75 text-white-75">
-                            50 St. Kolbe Drive, Holyoke, MA
+                            {{this.show.Location}}
                           </p>
                         </div>
 
@@ -84,7 +84,7 @@
 
                         <!-- Button -->
                         <a class="btn btn-outline-purple text-white text-black-hover"
-                          href="https://goo.gl/maps/PYCBnv1C8QFZHv5z8">
+                          href="{{this.show.Mapurl}}">
                           Get Directions!
                         </a>
 
