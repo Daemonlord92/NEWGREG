@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,12 +15,14 @@ import { NewsComponent } from './News/news/news.component';
     NavbarComponent,
     FooterComponent,
     ShowsComponent,
-    NewsComponent
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    NgbCollapseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
